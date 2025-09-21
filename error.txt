@@ -1,15 +1,6 @@
-======================================================================
-ERROR: test_config (unittest.loader._FailedTest.test_config)
-----------------------------------------------------------------------
-ImportError: Failed to import test module: test_config
-Traceback (most recent call last):
-  File "/usr/lib/python3.13/unittest/loader.py", line 137, in loadTestsFromName
-    module = __import__(module_name)
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_config.py", line 29, in <module>
-    from config import get_gcp_metadata
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/config.py", line 29, in <module>
-    from config import get_gcp_metadata
-ImportError: cannot import name 'get_gcp_metadata' from partially initialized module 'config' (most likely due to a circular import) (/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/config.py)
-
-
+Error fetching metadata from project/project-id due to network issue: Connection failed
+..Error fetching metadata from project/project-id due to network issue: 404 Not Found
+.An unexpected error occurred while fetching metadata from project/project-id: General request error
+...Error fetching metadata from project/project-id due to network issue: Request timed out
+.
 ----------------------------------------------------------------------
