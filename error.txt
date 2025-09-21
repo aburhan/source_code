@@ -20,26 +20,16 @@ Traceback (most recent call last):
               ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
   File "/usr/lib/python3.13/unittest/loader.py", line 137, in loadTestsFromName
     module = __import__(module_name)
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_base_api.py", line 43, in <module>
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_base_api.py", line 72, in <module>
     from custom_nodes.google_genmedia.base_api import GoogleGenAIBaseAPI
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/__init__.py", line 19, in <module>
-    from .gemini_flash_image_node import (
-        NODE_CLASS_MAPPINGS as GEMINI_FLASH_25_IMAGE_NODE_CLASS_MAPPINGS,
-    )
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/gemini_flash_image_node.py", line 23, in <module>
-    from .gemini_flash_image_api import GeminiFlashImageAPI
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/gemini_flash_image_api.py", line 26, in <module>
-    from . import exceptions, utils
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/utils.py", line 31, in <module>
-    from google.cloud import storage
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/__init__.py", line 29, in <module>
+    from .helper_nodes import NODE_CLASS_MAPPINGS as HELPER_NODE_CLASS_MAPPINGS
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/helper_nodes.py", line 24, in <module>
+    import cv2
+  File "/usr/local/google/home/ameenahb/venv/lib/python3.13/site-packages/cv2/__init__.py", line 12, in <module>
+    import numpy.core.multiarray
   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
-  File "<frozen importlib._bootstrap_external>", line 1559, in find_spec
-  File "<frozen importlib._bootstrap_external>", line 1528, in _get_spec
-  File "<frozen importlib._bootstrap_external>", line 1399, in __iter__
-  File "<frozen importlib._bootstrap_external>", line 1386, in _recalculate
-  File "<frozen importlib._bootstrap_external>", line 1382, in _get_parent_path
+  File "<frozen importlib._bootstrap>", line 1320, in _find_and_load_unlocked
   File "/usr/lib/python3.13/unittest/mock.py", line 692, in __getattr__
     raise AttributeError(name)
-AttributeError: __path__
+AttributeError: __spec__
