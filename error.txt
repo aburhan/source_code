@@ -1,16 +1,45 @@
-======================================================================
-ERROR: test_base_api (unittest.loader._FailedTest.test_base_api)
-----------------------------------------------------------------------
-ImportError: Failed to import test module: test_base_api
 Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/lib/python3.13/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+    ~~~~^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/unittest/main.py", line 103, in __init__
+    self.parseArgs(argv)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/unittest/main.py", line 142, in parseArgs
+    self.createTests()
+    ~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/unittest/main.py", line 153, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+                                                   self.module)
+                                                   ^^^^^^^^^^^^
+  File "/usr/lib/python3.13/unittest/loader.py", line 207, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+              ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
   File "/usr/lib/python3.13/unittest/loader.py", line 137, in loadTestsFromName
     module = __import__(module_name)
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_base_api.py", line 26, in <module>
-    from base_api import GoogleGenAIBaseAPI
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/base_api.py", line 21, in <module>
-    from . import exceptions
-ImportError: attempted relative import with no known parent package
-
-
-----------------------------------------------------------------------
-Ran 1 test in 0.000s
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_base_api.py", line 43, in <module>
+    from custom_nodes.google_genmedia.base_api import GoogleGenAIBaseAPI
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/__init__.py", line 19, in <module>
+    from .gemini_flash_image_node import (
+        NODE_CLASS_MAPPINGS as GEMINI_FLASH_25_IMAGE_NODE_CLASS_MAPPINGS,
+    )
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/gemini_flash_image_node.py", line 23, in <module>
+    from .gemini_flash_image_api import GeminiFlashImageAPI
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/gemini_flash_image_api.py", line 26, in <module>
+    from . import exceptions, utils
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/utils.py", line 31, in <module>
+    from google.cloud import storage
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1559, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1528, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1399, in __iter__
+  File "<frozen importlib._bootstrap_external>", line 1386, in _recalculate
+  File "<frozen importlib._bootstrap_external>", line 1382, in _get_parent_path
+  File "/usr/lib/python3.13/unittest/mock.py", line 692, in __getattr__
+    raise AttributeError(name)
+AttributeError: __path__
