@@ -1,0 +1,16 @@
+======================================================================
+ERROR: test_base_api (unittest.loader._FailedTest.test_base_api)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_base_api
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_base_api.py", line 26, in <module>
+    from base_api import GoogleGenAIBaseAPI
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/src/custom_nodes/google_genmedia/base_api.py", line 21, in <module>
+    from . import exceptions
+ImportError: attempted relative import with no known parent package
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
