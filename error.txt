@@ -1,29 +1,224 @@
+Project is test-project-123, region is us-central1
+FEProject is test-project-123, region is us-central1
+.E..EE..EEE
+======================================================================
+ERROR: test_empty_zone_metadata_raises_error (modules.python.tests.test_google_genmedia.test_base_api.TestGoogleGenAIBaseAPI.test_empty_zone_metadata_raises_error)
+Test that empty zone metadata raises error.
+----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/usr/lib/python3.13/unittest/__main__.py", line 18, in <module>
-    main(module=None)
-    ~~~~^^^^^^^^^^^^^
-  File "/usr/lib/python3.13/unittest/main.py", line 103, in __init__
-    self.parseArgs(argv)
-    ~~~~~~~~~~~~~~^^^^^^
-  File "/usr/lib/python3.13/unittest/main.py", line 142, in parseArgs
-    self.createTests()
-    ~~~~~~~~~~~~~~~~^^
-  File "/usr/lib/python3.13/unittest/main.py", line 153, in createTests
-    self.test = self.testLoader.loadTestsFromNames(self.testNames,
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
-                                                   self.module)
-                                                   ^^^^^^^^^^^^
-  File "/usr/lib/python3.13/unittest/loader.py", line 207, in loadTestsFromNames
-    suites = [self.loadTestsFromName(name, module) for name in names]
-              ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
-  File "/usr/lib/python3.13/unittest/loader.py", line 137, in loadTestsFromName
-    module = __import__(module_name)
-  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_retry.py", line 75, in <module>
-    from custom_nodes.google_genmedia.retry import retry_on_api_error
+  File "/usr/lib/python3.13/unittest/mock.py", line 1423, in patched
+    with self.decoration_helper(patched,
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+                                args,
+                                ^^^^^
+                                keywargs) as (newargs, newkeywargs):
+                                ^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1405, in decoration_helper
+    arg = exit_stack.enter_context(patching)
+  File "/usr/lib/python3.13/contextlib.py", line 530, in enter_context
+    result = _enter(cm)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1481, in __enter__
+    self.target = self.getter()
+                  ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pkgutil.py", line 513, in resolve_name
+    mod = importlib.import_module(modname)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1320, in _find_and_load_unlocked
-  File "/usr/lib/python3.13/unittest/mock.py", line 692, in __getattr__
-    raise AttributeError(name)
-AttributeError: __spec_
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test_base_api_standalone'
+
+======================================================================
+ERROR: test_init_both_from_metadata (modules.python.tests.test_google_genmedia.test_base_api.TestGoogleGenAIBaseAPI.test_init_both_from_metadata)
+Test initialization with both project_id and region from metadata.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/unittest/mock.py", line 1423, in patched
+    with self.decoration_helper(patched,
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+                                args,
+                                ^^^^^
+                                keywargs) as (newargs, newkeywargs):
+                                ^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1405, in decoration_helper
+    arg = exit_stack.enter_context(patching)
+  File "/usr/lib/python3.13/contextlib.py", line 530, in enter_context
+    result = _enter(cm)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1481, in __enter__
+    self.target = self.getter()
+                  ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pkgutil.py", line 513, in resolve_name
+    mod = importlib.import_module(modname)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test_base_api_standalone'
+
+======================================================================
+ERROR: test_init_project_id_from_metadata (modules.python.tests.test_google_genmedia.test_base_api.TestGoogleGenAIBaseAPI.test_init_project_id_from_metadata)
+Test initialization with project_id retrieved from metadata.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/unittest/mock.py", line 1423, in patched
+    with self.decoration_helper(patched,
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+                                args,
+                                ^^^^^
+                                keywargs) as (newargs, newkeywargs):
+                                ^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1405, in decoration_helper
+    arg = exit_stack.enter_context(patching)
+  File "/usr/lib/python3.13/contextlib.py", line 530, in enter_context
+    result = _enter(cm)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1481, in __enter__
+    self.target = self.getter()
+                  ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pkgutil.py", line 513, in resolve_name
+    mod = importlib.import_module(modname)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test_base_api_standalone'
+
+======================================================================
+ERROR: test_init_region_from_zone_metadata (modules.python.tests.test_google_genmedia.test_base_api.TestGoogleGenAIBaseAPI.test_init_region_from_zone_metadata)
+Test initialization with region derived from zone metadata.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/unittest/mock.py", line 1423, in patched
+    with self.decoration_helper(patched,
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+                                args,
+                                ^^^^^
+                                keywargs) as (newargs, newkeywargs):
+                                ^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1405, in decoration_helper
+    arg = exit_stack.enter_context(patching)
+  File "/usr/lib/python3.13/contextlib.py", line 530, in enter_context
+    result = _enter(cm)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1481, in __enter__
+    self.target = self.getter()
+                  ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pkgutil.py", line 513, in resolve_name
+    mod = importlib.import_module(modname)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test_base_api_standalone'
+
+======================================================================
+ERROR: test_zone_parsing_edge_cases (modules.python.tests.test_google_genmedia.test_base_api.TestGoogleGenAIBaseAPI.test_zone_parsing_edge_cases)
+Test edge cases in zone parsing.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_base_api.py", line 306, in test_zone_parsing_edge_cases
+    with patch("test_base_api_standalone.mock_get_gcp_metadata") as mock_metadata:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/unittest/mock.py", line 1481, in __enter__
+    self.target = self.getter()
+                  ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pkgutil.py", line 513, in resolve_name
+    mod = importlib.import_module(modname)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test_base_api_standalone'
+
+======================================================================
+ERROR: test_zone_parsing_invalid_format_raises_error (modules.python.tests.test_google_genmedia.test_base_api.TestGoogleGenAIBaseAPI.test_zone_parsing_invalid_format_raises_error)
+Test that invalid zone format raises error.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/unittest/mock.py", line 1423, in patched
+    with self.decoration_helper(patched,
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+                                args,
+                                ^^^^^
+                                keywargs) as (newargs, newkeywargs):
+                                ^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1405, in decoration_helper
+    arg = exit_stack.enter_context(patching)
+  File "/usr/lib/python3.13/contextlib.py", line 530, in enter_context
+    result = _enter(cm)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1481, in __enter__
+    self.target = self.getter()
+                  ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pkgutil.py", line 513, in resolve_name
+    mod = importlib.import_module(modname)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test_base_api_standalone'
+
+======================================================================
+ERROR: test_zone_parsing_various_formats (modules.python.tests.test_google_genmedia.test_base_api.TestGoogleGenAIBaseAPI.test_zone_parsing_various_formats)
+Test various zone formats are parsed correctly.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/unittest/mock.py", line 1423, in patched
+    with self.decoration_helper(patched,
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+                                args,
+                                ^^^^^
+                                keywargs) as (newargs, newkeywargs):
+                                ^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1405, in decoration_helper
+    arg = exit_stack.enter_context(patching)
+  File "/usr/lib/python3.13/contextlib.py", line 530, in enter_context
+    result = _enter(cm)
+  File "/usr/lib/python3.13/unittest/mock.py", line 1481, in __enter__
+    self.target = self.getter()
+                  ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pkgutil.py", line 513, in resolve_name
+    mod = importlib.import_module(modname)
+  File "/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'test_base_api_standalone'
+
+======================================================================
+FAIL: test_client_initialization_failure (modules.python.tests.test_google_genmedia.test_base_api.TestGoogleGenAIBaseAPI.test_client_initialization_failure)
+Test handling of client initialization failure.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/google/home/ameenahb/development/accelerated-platforms/modules/python/tests/test_google_genmedia/test_base_api.py", line 277, in test_client_initialization_failure
+    with self.assertRaises(APIInitializationError) as context:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: APIInitializationError not raised
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.015s
+
+FAILED (failures=1, errors=7)
