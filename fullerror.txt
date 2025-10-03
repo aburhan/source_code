@@ -1,0 +1,85 @@
+got prompt
+Initializing GenAI client for project 'fakeid' in region 'us-central1'
+GenAI client initialized successfully
+Sending request to Imagen API for text-to-image generation...
+HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/fakeid/locations/us-central1/publishers/google/models/imagen-4.0-generate-preview-06-06:predict "HTTP/1.1 403 Forbidden"
+An unexpected error occurred during image generation: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED', 'domain': 'googleapis.com', 'metadata': {'containerInfo': 'fakeid', 'consumer': 'projects/fakeid', 'service': 'aiplatform.googleapis.com', 'serviceTitle': 'Vertex AI API', 'activationUrl': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.'}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Google developers console API activation', 'url': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}]}]}}
+Error occurred during image generation: Image generation failed: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED', 'domain': 'googleapis.com', 'metadata': {'containerInfo': 'fakeid', 'consumer': 'projects/fakeid', 'service': 'aiplatform.googleapis.com', 'serviceTitle': 'Vertex AI API', 'activationUrl': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.'}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Google developers console API activation', 'url': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}]}]}}
+!!! Exception during processing !!! Error occurred during image generation: Image generation failed: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED', 'domain': 'googleapis.com', 'metadata': {'containerInfo': 'fakeid', 'consumer': 'projects/fakeid', 'service': 'aiplatform.googleapis.com', 'serviceTitle': 'Vertex AI API', 'activationUrl': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.'}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Google developers console API activation', 'url': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}]}]}}
+Traceback (most recent call last):
+  File "/home/comfyuser/comfy/ComfyUI/custom_nodes/google-genmedia/utils.py", line 176, in generate_image_from_text
+    response = client.models.generate_images(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/google/genai/models.py", line 6762, in generate_images
+    api_response = self._generate_images(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/google/genai/models.py", line 5508, in _generate_images
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/google/genai/_api_client.py", line 1266, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/google/genai/_api_client.py", line 1086, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/google/genai/_api_client.py", line 1063, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/comfyuser/.local/lib/python3.11/site-packages/google/genai/errors.py", line 105, in raise_for_response
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED', 'domain': 'googleapis.com', 'metadata': {'containerInfo': 'fakeid', 'consumer': 'projects/fakeid', 'service': 'aiplatform.googleapis.com', 'serviceTitle': 'Vertex AI API', 'activationUrl': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.'}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Google developers console API activation', 'url': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}]}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/comfyuser/comfy/ComfyUI/custom_nodes/google-genmedia/imagen4_nodes.py", line 177, in generate_and_return_image
+    pil_images = imagen_api.generate_image_from_text(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/comfy/ComfyUI/custom_nodes/google-genmedia/imagen4_api.py", line 116, in generate_image_from_text
+    return utils.generate_image_from_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/comfy/ComfyUI/custom_nodes/google-genmedia/retry.py", line 87, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/comfy/ComfyUI/custom_nodes/google-genmedia/utils.py", line 181, in generate_image_from_text
+    raise exceptions.APICallError(f"Image generation failed: {e}") from e
+/home/comfyuser/comfy/ComfyUI/custom_nodes/google-genmedia.exceptions.APICallError: Image generation failed: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED', 'domain': 'googleapis.com', 'metadata': {'containerInfo': 'fakeid', 'consumer': 'projects/fakeid', 'service': 'aiplatform.googleapis.com', 'serviceTitle': 'Vertex AI API', 'activationUrl': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.'}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Google developers console API activation', 'url': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}]}]}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/comfyuser/comfy/ComfyUI/execution.py", line 427, in execute
+    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/comfy/ComfyUI/execution.py", line 270, in get_output_data
+    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfyuser/comfy/ComfyUI/execution.py", line 244, in _async_map_node_over_list
+    await process_inputs(input_dict, i)
+  File "/home/comfyuser/comfy/ComfyUI/execution.py", line 232, in process_inputs
+    result = f(**inputs)
+             ^^^^^^^^^^^
+  File "/home/comfyuser/comfy/ComfyUI/custom_nodes/google-genmedia/imagen4_nodes.py", line 196, in generate_and_return_image
+    raise RuntimeError(f"Error occurred during image generation: {e}")
+RuntimeError: Error occurred during image generation: Image generation failed: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED', 'domain': 'googleapis.com', 'metadata': {'containerInfo': 'fakeid', 'consumer': 'projects/fakeid', 'service': 'aiplatform.googleapis.com', 'serviceTitle': 'Vertex AI API', 'activationUrl': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.'}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Google developers console API activation', 'url': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}]}]}}
+
+Prompt executed in 0.16 seconds
