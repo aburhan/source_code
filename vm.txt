@@ -1,0 +1,101 @@
+sudo journalctl -u google-startup-scripts.service --no-pager | tail -100
+Nov 18 18:56:05 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script:  userservice Pulling
+Nov 18 18:56:05 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script:  contacts Pulling
+Nov 18 18:56:05 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script:  balancereader Pulling
+Nov 18 18:56:07 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script:  ledgerwriter Error
+Nov 18 18:56:07 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script:  userservice Error
+Nov 18 18:56:07 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script:  balancereader Error
+Nov 18 18:56:07 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script:  transactionhistory Error
+Nov 18 18:56:07 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script:  contacts Error
+Nov 18 18:56:07 bank-of-anthos-application google_metadata_script_runner[1449]: startup-script: Error response from daemon: manifest for us-central1-docker.pkg.dev/mmb-project-3/bank-of-anthos-images/ledgerwriter:latest not found: manifest unknown: Failed to fetch "latest"
+Nov 18 18:56:07 bank-of-anthos-application google_metadata_script_runner[1449]: Script "startup-script" failed with error: exit status 18
+Nov 18 18:56:07 bank-of-anthos-application google_metadata_script_runner[1449]: Finished running startup scripts.
+Nov 18 18:56:07 bank-of-anthos-application systemd[1]: google-startup-scripts.service: Deactivated successfully.
+Nov 18 18:56:07 bank-of-anthos-application systemd[1]: Finished Google Compute Engine Startup Scripts.
+Nov 18 18:56:07 bank-of-anthos-application systemd[1]: google-startup-scripts.service: Consumed 3min 29.900s CPU time.
+-- Boot 1e441167c9f24379988142dc7cc4001a --
+Nov 18 23:03:37 bank-of-anthos-application systemd[1]: Starting Google Compute Engine Startup Scripts...
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: Starting startup scripts (version 20250116.00-0ubuntu1~22.04.1).
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: Found startup-script in metadata.
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: =====================================
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Bank of Anthos - Build from Source
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: =====================================
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Project: mmb-project-3
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Region: us-central1
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Artifact Registry: us-central1-docker.pkg.dev/mmb-project-3/bank-of-anthos-images
+Nov 18 23:03:37 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: =====================================
+Nov 18 23:03:38 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Hit:1 http://us-central1.gce.archive.ubuntu.com/ubuntu jammy InRelease
+Nov 18 23:03:38 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Get:2 http://us-central1.gce.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Nov 18 23:03:38 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Hit:3 http://us-central1.gce.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Nov 18 23:03:38 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Nov 18 23:03:38 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Hit:5 https://packages.cloud.google.com/apt cloud-sdk InRelease
+Nov 18 23:03:47 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Fetched 257 kB in 1s (319 kB/s)
+Nov 18 23:03:48 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Reading package lists...
+Nov 18 23:03:48 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Reading package lists...
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Building dependency tree...
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Reading state information...
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: postgresql-client is already the newest version (14+238).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: gradle is already the newest version (4.4.1-13).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: maven is already the newest version (3.6.3-5).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: curl is already the newest version (7.81.0-1ubuntu1.21).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: git is already the newest version (1:2.34.1-1ubuntu1.15).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: python3 is already the newest version (3.10.6-1~22.04.1).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: wget is already the newest version (1.21.2-2ubuntu1.1).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: docker.io is already the newest version (28.2.2-0ubuntu1~22.04.1).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: openjdk-17-jdk is already the newest version (17.0.16+8~us1-0ubuntu1~22.04.1).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: python3-pip is already the newest version (22.0.2+dfsg-1ubuntu0.7).
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script:                                  Dload  Upload   Total   Spent    Left  Speed
+Nov 18 23:03:49 bank-of-anthos-application google_metadata_script_runner[1243]: [174B blob data]
+Nov 18 23:03:51 bank-of-anthos-application google_metadata_script_runner[1243]: [174B blob data]
+Nov 18 23:03:51 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Reading package lists...
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Building dependency tree...
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Reading state information...
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: ca-certificates is already the newest version (20240203~22.04.1).
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: gnupg is already the newest version (2.2.27-3ubuntu2.4).
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: apt-transport-https is already the newest version (2.4.14).
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script:                                  Dload  Upload   Total   Spent    Left  Speed
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: [190B blob data]
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: [95B blob data]
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: OK
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Hit:1 http://us-central1.gce.archive.ubuntu.com/ubuntu jammy InRelease
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Hit:2 http://us-central1.gce.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Hit:3 http://us-central1.gce.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Hit:4 https://packages.cloud.google.com/apt cloud-sdk InRelease
+Nov 18 23:03:52 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Reading package lists...
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/google-cloud-sdk.list:1 and /etc/apt/sources.list.d/google-cloud-sdk.list:2
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Reading package lists...
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Building dependency tree...
+Nov 18 23:03:55 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Reading state information...
+Nov 18 23:03:56 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: google-cloud-sdk is already the newest version (467.0.0-0).
+Nov 18 23:03:56 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: WARNING: Your config file at [/root/.docker/config.json] contains these credential helper entries:
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script:
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: {
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script:   "credHelpers": {
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script:     "us-central1-docker.pkg.dev": "gcloud"
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script:   }
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: }
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Adding credentials for: us-central1-docker.pkg.dev
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: gcloud credential helpers already registered correctly.
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: Cloning Bank of Anthos repository...
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: startup-script: fatal: destination path '.' already exists and is not an empty directory.
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: Script "startup-script" failed with error: exit status 128
+Nov 18 23:04:02 bank-of-anthos-application google_metadata_script_runner[1243]: Finished running startup scripts.
+Nov 18 23:04:03 bank-of-anthos-application systemd[1]: google-startup-scripts.service: Deactivated successfully.
+Nov 18 23:04:03 bank-of-anthos-application systemd[1]: Finished Google Compute Engine Startup Scripts.
+Nov 18 23:04:03 bank-of-anthos-application systemd[1]: google-startup-scripts.service: Consumed 14.220s CPU time.
