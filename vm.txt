@@ -1,37 +1,9 @@
-total 32
-drwxr-xr-x 6 root root 4096 Nov 18 23:27 .
-drwxr-xr-x 8 root root 4096 Nov 18 23:27 ..
-drwxr-xr-x 4 root root 4096 Nov 18 23:27 accounts-db
--rw-r--r-- 1 root root 2267 Nov 18 23:27 cloudbuild.yaml
-drwxr-xr-x 3 root root 4096 Nov 18 23:27 components
-drwxr-xr-x 4 root root 4096 Nov 18 23:27 contacts
--rw-r--r-- 1 root root  873 Nov 18 23:27 skaffold.yaml
-drwxr-xr-x 4 root root 4096 Nov 18 23:27 userservice
-total 36
-drwxr-xr-x 7 root root 4096 Nov 18 23:27 .
-drwxr-xr-x 8 root root 4096 Nov 18 23:27 ..
-drwxr-xr-x 4 root root 4096 Nov 18 23:27 balancereader
--rw-r--r-- 1 root root 2078 Nov 18 23:27 cloudbuild.yaml
-drwxr-xr-x 4 root root 4096 Nov 18 23:27 components
-drwxr-xr-x 4 root root 4096 Nov 18 23:27 ledger-db
-drwxr-xr-x 4 root root 4096 Nov 18 23:27 ledgerwriter
--rw-r--r-- 1 root root  959 Nov 18 23:27 skaffold.yaml
-drwxr-xr-x 4 root root 4096 Nov 18 23:27 transactionhistory
-total 104
-drwxr-xr-x 5 root root  4096 Nov 18 23:27 .
-drwxr-xr-x 8 root root  4096 Nov 18 23:27 ..
--rw-r--r-- 1 root root    86 Nov 18 23:27 .dockerignore
--rw-r--r-- 1 root root  1410 Nov 18 23:27 Dockerfile
--rw-r--r-- 1 root root  3278 Nov 18 23:27 README.md
--rw-r--r-- 1 root root   575 Nov 18 23:27 __init__.py
--rw-r--r-- 1 root root  1647 Nov 18 23:27 api_call.py
--rw-r--r-- 1 root root  2112 Nov 18 23:27 cloudbuild.yaml
--rw-r--r-- 1 root root 34773 Nov 18 23:27 frontend.py
-drwxr-xr-x 4 root root  4096 Nov 18 23:27 k8s
--rw-r--r-- 1 root root   564 Nov 18 23:27 logging.conf
--rw-r--r-- 1 root root   354 Nov 18 23:27 requirements.in
--rw-r--r-- 1 root root  4172 Nov 18 23:27 requirements.txt
--rw-r--r-- 1 root root  1900 Nov 18 23:27 skaffold.yaml
-drwxr-xr-x 5 root root  4096 Nov 18 23:27 static
-drwxr-xr-x 3 root root  4096 Nov 18 23:27 templates
--rw-r--r-- 1 root root  1683 Nov 18 23:27 traced_thread_pool_executor.py
+NAME                                  IMAGE                                                                                      COMMAND                  SERVICE              CREATED          STATUS                                  PORTS
+bank-of-anthos-balancereader-1        us-central1-docker.pkg.dev/mmb-project-3/bank-of-anthos-images/balancereader:latest        "java -cp @/app/jib-…"   balancereader        12 seconds ago   Up 7 seconds                            
+bank-of-anthos-contacts-1             us-central1-docker.pkg.dev/mmb-project-3/bank-of-anthos-images/contacts:latest             "/bin/sh -c 'gunicor…"   contacts             12 seconds ago   Restarting (3) Less than a second ago   
+bank-of-anthos-frontend-1             us-central1-docker.pkg.dev/mmb-project-3/bank-of-anthos-images/frontend:latest             "/bin/sh -c 'gunicor…"   frontend             12 seconds ago   Up 7 seconds                            0.0.0.0:8080->8080/tcp, :::8080->8080/tcp
+bank-of-anthos-ledgerwriter-1         us-central1-docker.pkg.dev/mmb-project-3/bank-of-anthos-images/ledgerwriter:latest         "java -cp @/app/jib-…"   ledgerwriter         12 seconds ago   Up 7 seconds                            
+bank-of-anthos-transactionhistory-1   us-central1-docker.pkg.dev/mmb-project-3/bank-of-anthos-images/transactionhistory:latest   "java -cp @/app/jib-…"   transactionhistory   12 seconds ago   Up 7 seconds                            
+bank-of-anthos-userservice-1          us-central1-docker.pkg.dev/mmb-project-3/bank-of-anthos-images/userservice:latest          "/bin/sh -c 'gunicor…"   userservice          12 seconds ago   Up Less than a second                   
+sa_113952152518403916371@bank-of-anthos-application:/opt/bank-of-anthos$ curl http://localhost:8080
+curl: (7) Failed to connect to localhost port 8080 after 0 ms: Connection refused
