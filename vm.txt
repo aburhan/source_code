@@ -1,7 +1,51 @@
-      - PUB_KEY_PATH=/root/.ssh/publickey
-      - PRIV_KEY_PATH=/keys/jwtRS256.key
-      - PUB_KEY_PATH=/keys/jwtRS256.key.pub
-      - PUB_KEY_PATH=/keys/jwtRS256.key.pub  
-      - PUB_KEY_PATH=/root/.ssh/publickey
-      - PUB_KEY_PATH=/root/.ssh/publickey
-      - PUB_KEY_PATH=/root/.ssh/publickey
+sudo docker-compose logs userservice --tail=50
+userservice  |           ^^^^^^^^^^^^^^^^^^^^
+userservice  |   File "/app/userservice.py", line 239, in create_app
+userservice  |     app.config['EXPIRY_SECONDS'] = int(os.environ.get('TOKEN_EXPIRY_SECONDS'))
+userservice  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+userservice  | TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+userservice  | {"timestamp": "2025-11-19 00:53:37", "message": "info | Worker exiting (pid: 8)", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:53:37", "message": "_shutdown | Stopping userservice.", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:53:37", "message": "error | Worker (pid:8) exited with code 3", "severity": "ERROR"}
+userservice  | {"timestamp": "2025-11-19 00:53:37", "message": "error | Shutting down: Master", "severity": "ERROR"}
+userservice  | {"timestamp": "2025-11-19 00:53:37", "message": "error | Reason: Worker failed to boot.", "severity": "ERROR"}
+userservice  | {"timestamp": "2025-11-19 00:54:03", "message": "info | Starting gunicorn 23.0.0", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:54:03", "message": "info | Listening at: http://0.0.0.0:8080 (7)", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:54:03", "message": "info | Using worker: gthread", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:54:03", "message": "info | Booting worker with pid: 8", "severity": "INFO"}
+userservice  | /usr/local/lib/python3.12/site-packages/opentelemetry/instrumentation/dependencies.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+userservice  |   from pkg_resources import (
+userservice  | {"timestamp": "2025-11-19 00:54:04", "message": "create_app | Starting userservice.", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:54:04", "message": "create_app | 🚫 Tracing disabled.", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:54:04", "message": "exception | Exception in worker process", "severity": "ERROR"}
+userservice  | Traceback (most recent call last):
+userservice  |   File "/usr/local/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+userservice  |     worker.init_process()
+userservice  |   File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 94, in init_process
+userservice  |     super().init_process()
+userservice  |   File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+userservice  |     self.load_wsgi()
+userservice  |   File "/usr/local/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+userservice  |     self.wsgi = self.app.wsgi()
+userservice  |                 ^^^^^^^^^^^^^^^
+userservice  |   File "/usr/local/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+userservice  |     self.callable = self.load()
+userservice  |                     ^^^^^^^^^^^
+userservice  |   File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+userservice  |     return self.load_wsgiapp()
+userservice  |            ^^^^^^^^^^^^^^^^^^^
+userservice  |   File "/usr/local/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+userservice  |     return util.import_app(self.app_uri)
+userservice  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+userservice  |   File "/usr/local/lib/python3.12/site-packages/gunicorn/util.py", line 423, in import_app
+userservice  |     app = app(*args, **kwargs)
+userservice  |           ^^^^^^^^^^^^^^^^^^^^
+userservice  |   File "/app/userservice.py", line 239, in create_app
+userservice  |     app.config['EXPIRY_SECONDS'] = int(os.environ.get('TOKEN_EXPIRY_SECONDS'))
+userservice  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+userservice  | TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+userservice  | {"timestamp": "2025-11-19 00:54:04", "message": "info | Worker exiting (pid: 8)", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:54:04", "message": "_shutdown | Stopping userservice.", "severity": "INFO"}
+userservice  | {"timestamp": "2025-11-19 00:54:04", "message": "error | Worker (pid:8) exited with code 3", "severity": "ERROR"}
+userservice  | {"timestamp": "2025-11-19 00:54:04", "message": "error | Shutting down: Master", "severity": "ERROR"}
+userservice  | {"timestamp": "2025-11-19 00:54:04", "message": "error | Reason: Worker failed to boot.", "severity": "ERROR"}
