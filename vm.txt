@@ -1,3 +1,4 @@
+admin_ameenahb_altostrat_com@bank-of-anthos-application:/opt/bank-of-anthos$ grep -A 5 "contacts:" docker-compose.yml
       - CONTACTS_API_ADDR=contacts:8080
       - TRANSACTIONS_API_ADDR=ledgerwriter:8080
     restart: always
@@ -12,3 +13,13 @@
       - PORT=8080
       - ENABLE_TRACING=false
       - LOCAL_ROUTING_NUM=883745000
+admin_ameenahb_altostrat_com@bank-of-anthos-application:/opt/bank-of-anthos$ # Download a working docker-compose.yml from the repo
+sudo wget https://raw.githubusercontent.com/GoogleCloudPlatform/bank-of-anthos/main/docker-compose.yml -O docker-compose.yml.new
+
+# Check if it has the JWT key configs
+grep "PUB_KEY_PATH" docker-compose.yml.new
+--2025-11-19 00:10:00--  https://raw.githubusercontent.com/GoogleCloudPlatform/bank-of-anthos/main/docker-compose.yml
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2025-11-19 00:10:00 ERROR 404: Not Found.
