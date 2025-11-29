@@ -1,23 +1,27 @@
-APP_URL=$(cd terraform && terraform output -raw app_url)
-
-# Health check
-curl $APP_URL/health
-
-# Get users (should show 5 sample users)
-curl $APP_URL/api/users
-
-# Create a new user
-curl -X POST $APP_URL/api/users \
-  -H "Content-Type: application/json" \
-  -d '{"name": "Test User", "email": "test@example.com"}'
-{"error":"connection to server at \"10.0.1.240\", port 5432 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?\n","status":"unhealthy"}
-<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+[   52.558426] cloud-init[1654]: Last metadata expiration check: 0:00:10 ago on Sat Nov 29 21:22:25 2025.
+[   52.595336] cloud-init[1654]: No match for argument: postgresql15-pglogical
+[   52.612699] cloud-init[1654]: Error: Unable to find a match: postgresql15-pglogical
+[   52.648162] cloud-init[1654]: pglogical package not available, continuing...
+[   53.226639] cloud-init[1654]:  * Initializing database in '/var/lib/pgsql/data'
+[   54.865348] cloud-init[1654]:  * Initialized, logs are in /var/lib/pgsql/initdb_postgresql.log
+[   54.914505] cloud-init[1654]: Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /usr/lib/systemd/system/postgresql.service.
+[   54.988406] zram_generator::config[4032]: zram0: system has too much memory (1901MB), limit is 800MB, ignoring.
+[FAILED] Failed to start postgresql… - PostgreSQL database server.
+[   55.242779] cloud-init[1654]: Job for postgresql.service failed because the control process exited with error code.
+[   55.242909] cloud-init[1654]: See "systemctl status postgresql.service" and "journalctl -xeu postgresql.service" for details.
+[   55.245988] cloud-init[1654]: 2025-11-29 21:22:38,227 - cc_scripts_user.py[WARNING]: Failed to run module scripts-user (scripts in /var/lib/cloud/instance/scripts)
+[   55.246257] cloud-init[1654]: 2025-11-29 21:22:38,227 - util.py[WARNING]: Running module scripts-user (<module 'cloudinit.config.cc_scripts_user' from '/usr/lib/python3.9/site-packages/cloudinit/config/cc_scripts_user.py'>) failed
+ci-info: no authorized SSH keys fingerprints found for user ec2-user.
+<14>Nov 29 21:22:38 cloud-init: #############################################################
+<14>Nov 29 21:22:38 cloud-init: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+<14>Nov 29 21:22:38 cloud-init: 256 SHA256:8Odwdi5IxAXK2iVgC57RtIx98ezquyKvA/Yq+vXeQKc root@ip-10-0-1-240.ec2.internal (ECDSA)
+<14>Nov 29 21:22:38 cloud-init: 256 SHA256:2Qews0fH5BgtbdWDl28q2Q+3uDGzbCtGWumgzctPK+Y root@ip-10-0-1-240.ec2.internal (ED25519)
+<14>Nov 29 21:22:38 cloud-init: -----END SSH HOST KEY FINGERPRINTS-----
+<14>Nov 29 21:22:38 cloud-init: #############################################################
+-----BEGIN SSH HOST KEY KEYS-----
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEgx3bQrbHOL4yJJ2CkhIXMD3x40QftUon7Ubnqd/MJ8sbH76WgF3vd967fQS4Lh9jTBverRBIHSBvpLpHQRses= root@ip-10-0-1-240.ec2.internal
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEQyXZl4ZmoyB1WVx4DXJZAiUgfDSb6/FsbqCJIcQ4lE root@ip-10-0-1-240.ec2.internal
+-----END SSH HOST KEY KEYS-----
+[   55.323115] cloud-init[1654]: Cloud-init v. 22.2.2 finished at Sat, 29 Nov 2025 21:22:38 +0000. Datasource DataSourceEc2.  Up 55.31 seconds
+[FAILED] Failed to start cloud-fina… Execute cloud user/final scripts.
+        2025-11-29T21:29:06+00:00
