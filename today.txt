@@ -1,1 +1,23 @@
-Error occurred during image generation: Image generation failed: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.', 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED', 'domain': 'googleapis.com', 'metadata': {'consumer': 'projects/fakeid', 'containerInfo': 'fakeid', 'serviceTitle': 'Vertex AI API', 'service': 'aiplatform.googleapis.com', 'activationUrl': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'Vertex AI API has not been used in project fakeid before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.'}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Google developers console API activation', 'url': 'https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=fakeid'}]}]}}
+APP_URL=$(cd terraform && terraform output -raw app_url)
+
+# Health check
+curl $APP_URL/health
+
+# Get users (should show 5 sample users)
+curl $APP_URL/api/users
+
+# Create a new user
+curl -X POST $APP_URL/api/users \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Test User", "email": "test@example.com"}'
+{"error":"connection to server at \"10.0.1.240\", port 5432 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?\n","status":"unhealthy"}
+<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
